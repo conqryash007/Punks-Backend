@@ -62,4 +62,6 @@ const updatePrice = async (req, res) => {
   }
 };
 
+updatePrice(1, 1);
+
 module.exports = { updatePrice };
