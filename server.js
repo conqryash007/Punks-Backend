@@ -8,10 +8,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("/test", (req, res) => {
   res.json({ ok: true, msg: "Crypt3DPunks Backend" });
 });
-app.get("/start", updatePrice);
+
+app.get("/", updatePrice);
 
 const PORT = process.env.PORT || 3000;
 //Start the server
