@@ -11,10 +11,11 @@ const updatePrice = async (req, res) => {
       const ms = sec * 1000;
       await new Promise((resolve) => setTimeout(resolve, ms));
     };
-
+    
     while (1) {
       // 1. get the current ETH/USD price from contract
       let contractPriceEther = await getCurrentUSD();
+      console.log(contractPriceEther);
 
       // 2. get the current ETH/USD price from API
       const response = await axios.get(
@@ -31,7 +32,7 @@ const updatePrice = async (req, res) => {
       );
       console.log(changeInPrice, "%");
 
-      if (changeInPrice > 5) {
+      if (changeInPrice > 2) {
         const etherPrices = await getCurrentPrices();
         console.log(etherPrices);
 
@@ -55,7 +56,7 @@ const updatePrice = async (req, res) => {
         console.log(newEtherPrices);
       }
 
-      await wait(5);
+      await wait(60);
     }
   } catch (err) {
     console.log(err);

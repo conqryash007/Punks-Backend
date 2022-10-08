@@ -1,6 +1,6 @@
 const ABI = require("./artifacts/Crypt3dPunksABI");
 
-const contractAddress = "0xa1D3D58f1295FE12f31e13F321A08A88918AD97b";
+const contractAddress = "0xFd45EA76c45D756f93f0aa4bbb4e5274fbC4EA3E";
 
 const infuraKey = "a44bbee405dd4b29afb8874b2c7975ff";
 
