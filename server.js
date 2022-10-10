@@ -14,7 +14,7 @@ app.get("/test", (req, res) => {
 
 app.get("/", updatePrice);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 //Start the server
 app.listen(PORT, () => {
   console.log(`The application started successfully on port ${PORT}`);
