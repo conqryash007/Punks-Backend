@@ -32,31 +32,31 @@ const updatePrice = async (req, res) => {
       );
       console.log(changeInPrice, "%");
 
-      if (changeInPrice > 2) {
+      if (changeInPrice > 5) {
         const etherPrices = await getCurrentPrices();
         console.log(etherPrices);
 
-        // let newEtherPrices = etherPrices.map((curr) => {
-        //   if (marketPriceEther > contractPriceEther) {
-        //     return (curr - curr * (changeInPrice / 100)).toFixed(10);
-        //   } else {
-        //     return (curr + curr * (changeInPrice / 100)).toFixed(10);
-        //   }
-        // });
+        let newEtherPrices = etherPrices.map((curr) => {
+          if (marketPriceEther > contractPriceEther) {
+            return (curr - curr * (changeInPrice / 100)).toFixed(10);
+          } else {
+            return (curr + curr * (changeInPrice / 100)).toFixed(10);
+          }
+        });
 
-        // newEtherPrices = newEtherPrices.map((curr) =>
-        //   ethers.utils.parseEther(curr)
-        // );
+        newEtherPrices = newEtherPrices.map((curr) =>
+          ethers.utils.parseEther(curr)
+        );
 
         // update new prices in contract
-        // await updateContractPrices(newEtherPrices, marketPriceEther * 100);
+        await updateContractPrices(newEtherPrices, marketPriceEther * 100);
 
         // to be removed and get from contract
-        // contractPriceEther = marketPriceEther;
-        // console.log(newEtherPrices);
+        contractPriceEther = marketPriceEther;
+        console.log(newEtherPrices);
       }
 
-      await wait(60);
+      await wait(300);
     }
   } catch (err) {
     console.log(err);
