@@ -1,6 +1,6 @@
 const axios = require("axios");
 const { ethers } = require("ethers");
-const { getCurrentPrices } = require("./../helper/getCurrentPrices");
+
 const { updateContractPrices } = require("./../helper/updateContractPrice");
 const { getCurrentUSD } = require("./../helper/getCurrentUSD");
 
@@ -32,27 +32,11 @@ const updatePrice = async (req, res) => {
       console.log(changeInPrice, "%");
 
       if (changeInPrice > 5) {
-        const etherPrices = await getCurrentPrices();
-        console.log(etherPrices);
-
-        let newEtherPrices = etherPrices.map((curr) => {
-          if (marketPriceEther > contractPriceEther) {
-            return (curr - curr * (changeInPrice / 100)).toFixed(10);
-          } else {
-            return (curr + curr * (changeInPrice / 100)).toFixed(10);
-          }
-        });
-
-        newEtherPrices = newEtherPrices.map((curr) =>
-          ethers.utils.parseEther(curr)
-        );
-
         // update new prices in contract
-        await updateContractPrices(newEtherPrices, marketPriceEther * 100);
+        await updateContractPrices(parseInt(marketPriceEther * 100));
 
         // to be removed and get from contract
         contractPriceEther = marketPriceEther;
-        console.log(newEtherPrices);
       }
 
       await wait(5);

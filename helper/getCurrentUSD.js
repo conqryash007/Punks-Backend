@@ -1,21 +1,18 @@
-const {
-  ABI,
-  contractAddress,
-  network,
-  infuraKey,
-  privateKey,
-} = require("./config");
+const { ABI, contractAddress, network, infuraKey } = require("./config");
 const ethers = require("ethers");
 
-const getCurrentUSD = async (newPricesETH, updatedPrice) => {
+const getCurrentUSD = async () => {
   try {
     const provider = new ethers.providers.InfuraProvider(network, infuraKey);
     const punksContract = new ethers.Contract(contractAddress, ABI, provider);
-    const res = await punksContract.lastUpatedPriceInWei();
-    const price = parseInt(res._hex);
-    return price / 100;
+    const ethusdContractPrice = await punksContract.EtherPrice();
+
+    let res = parseInt(ethusdContractPrice._hex);
+    res = res / 100;
+
+    return res;
   } catch (err) {
-    console.log(err);
+    throw new Error(err?.message || "Something Went Wrong");
   }
 };
 
