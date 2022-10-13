@@ -40,7 +40,12 @@ module.exports = [
         name: "operator",
         type: "address",
       },
-      { indexed: false, internalType: "bool", name: "approved", type: "bool" },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "approved",
+        type: "bool",
+      },
     ],
     name: "ApprovalForAll",
     type: "event",
@@ -80,8 +85,18 @@ module.exports = [
   {
     anonymous: false,
     inputs: [
-      { indexed: true, internalType: "address", name: "from", type: "address" },
-      { indexed: true, internalType: "address", name: "to", type: "address" },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
       {
         indexed: true,
         internalType: "uint256",
@@ -106,16 +121,34 @@ module.exports = [
     type: "event",
   },
   {
-    inputs: [{ internalType: "uint256", name: "token", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "token",
+        type: "uint256",
+      },
+    ],
     name: "AlterPayment",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     name: "CryptoCurrencies",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
@@ -129,19 +162,37 @@ module.exports = [
   {
     inputs: [],
     name: "ExistingERC1155",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
     name: "Round",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "validator", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "validator",
+        type: "address",
+      },
+    ],
     name: "addValidator",
     outputs: [],
     stateMutability: "nonpayable",
@@ -149,29 +200,69 @@ module.exports = [
   },
   {
     inputs: [
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
     ],
     name: "amountInCryptoCurrency",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
     ],
     name: "amountInEthers",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [
-      { internalType: "address", name: "to", type: "address" },
-      { internalType: "uint256", name: "tokenId", type: "uint256" },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
     ],
     name: "approve",
     outputs: [],
@@ -179,23 +270,49 @@ module.exports = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "owner", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+    ],
     name: "balanceOf",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
     name: "baseURI",
-    outputs: [{ internalType: "string", name: "", type: "string" }],
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [
-      { internalType: "uint256", name: "_quantity", type: "uint256" },
-      { internalType: "address", name: "_to", type: "address" },
+      {
+        internalType: "uint256",
+        name: "_quantity",
+        type: "uint256",
+      },
+      {
+        internalType: "address",
+        name: "_to",
+        type: "address",
+      },
     ],
     name: "batchMint",
     outputs: [],
@@ -204,9 +321,21 @@ module.exports = [
   },
   {
     inputs: [
-      { internalType: "uint8", name: "token", type: "uint8" },
-      { internalType: "uint256", name: "_quantity", type: "uint256" },
-      { internalType: "address", name: "_to", type: "address" },
+      {
+        internalType: "uint8",
+        name: "token",
+        type: "uint8",
+      },
+      {
+        internalType: "uint256",
+        name: "_quantity",
+        type: "uint256",
+      },
+      {
+        internalType: "address",
+        name: "_to",
+        type: "address",
+      },
     ],
     name: "batchMintUsingCryptoCurrency",
     outputs: [],
@@ -214,14 +343,26 @@ module.exports = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256[]", name: "nftIds", type: "uint256[]" }],
+    inputs: [
+      {
+        internalType: "uint256[]",
+        name: "nftIds",
+        type: "uint256[]",
+      },
+    ],
     name: "batchSwapExistingUsers",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "tokenId", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
     name: "burn",
     outputs: [],
     stateMutability: "nonpayable",
@@ -230,7 +371,13 @@ module.exports = [
   {
     inputs: [],
     name: "burnAddress",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
@@ -244,7 +391,13 @@ module.exports = [
   {
     inputs: [],
     name: "contractBalance",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
@@ -262,47 +415,116 @@ module.exports = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "tokenId", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
     name: "getApproved",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
     name: "getNextTokenId",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "initialEtherPrice",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [
-      { internalType: "address", name: "owner", type: "address" },
-      { internalType: "address", name: "operator", type: "address" },
+      {
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "operator",
+        type: "address",
+      },
     ],
     name: "isApprovedForAll",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
     name: "name",
-    outputs: [{ internalType: "string", name: "", type: "string" }],
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
     name: "owner",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "tokenId", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
     name: "ownerOf",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
@@ -315,8 +537,16 @@ module.exports = [
   },
   {
     inputs: [
-      { internalType: "uint256", name: "_round", type: "uint256" },
-      { internalType: "bool", name: "flip", type: "bool" },
+      {
+        internalType: "uint256",
+        name: "_round",
+        type: "uint256",
+      },
+      {
+        internalType: "bool",
+        name: "flip",
+        type: "bool",
+      },
     ],
     name: "pauseUnpauseNFTsTransfer",
     outputs: [],
@@ -326,19 +556,43 @@ module.exports = [
   {
     inputs: [],
     name: "paused",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     name: "paymentPermitted",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "validator", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "validator",
+        type: "address",
+      },
+    ],
     name: "removeValidator",
     outputs: [],
     stateMutability: "nonpayable",
@@ -352,23 +606,53 @@ module.exports = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "_round", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_round",
+        type: "uint256",
+      },
+    ],
     name: "reveal",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     name: "roundCap",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     name: "roundReveal",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
@@ -384,9 +668,21 @@ module.exports = [
   },
   {
     inputs: [
-      { internalType: "address", name: "from", type: "address" },
-      { internalType: "address", name: "to", type: "address" },
-      { internalType: "uint256", name: "tokenId", type: "uint256" },
+      {
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
     ],
     name: "safeTransferFrom",
     outputs: [],
@@ -395,10 +691,26 @@ module.exports = [
   },
   {
     inputs: [
-      { internalType: "address", name: "from", type: "address" },
-      { internalType: "address", name: "to", type: "address" },
-      { internalType: "uint256", name: "tokenId", type: "uint256" },
-      { internalType: "bytes", name: "data", type: "bytes" },
+      {
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+      {
+        internalType: "bytes",
+        name: "data",
+        type: "bytes",
+      },
     ],
     name: "safeTransferFrom",
     outputs: [],
@@ -407,8 +719,16 @@ module.exports = [
   },
   {
     inputs: [
-      { internalType: "address", name: "operator", type: "address" },
-      { internalType: "bool", name: "approved", type: "bool" },
+      {
+        internalType: "address",
+        name: "operator",
+        type: "address",
+      },
+      {
+        internalType: "bool",
+        name: "approved",
+        type: "bool",
+      },
     ],
     name: "setApprovalForAll",
     outputs: [],
@@ -428,36 +748,84 @@ module.exports = [
   {
     inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     name: "stopTransfer",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [{ internalType: "bytes4", name: "interfaceId", type: "bytes4" }],
+    inputs: [
+      {
+        internalType: "bytes4",
+        name: "interfaceId",
+        type: "bytes4",
+      },
+    ],
     name: "supportsInterface",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
     name: "symbol",
-    outputs: [{ internalType: "string", name: "", type: "string" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "uint256", name: "tokenId", type: "uint256" }],
-    name: "tokenURI",
-    outputs: [{ internalType: "string", name: "", type: "string" }],
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [
-      { internalType: "address", name: "from", type: "address" },
-      { internalType: "address", name: "to", type: "address" },
-      { internalType: "uint256", name: "tokenId", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "tokenURI",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
     ],
     name: "transferFrom",
     outputs: [],
@@ -465,7 +833,13 @@ module.exports = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "newOwner", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
     name: "transferOwnership",
     outputs: [],
     stateMutability: "nonpayable",
@@ -482,7 +856,13 @@ module.exports = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "string", name: "_newbaseURI", type: "string" }],
+    inputs: [
+      {
+        internalType: "string",
+        name: "_newbaseURI",
+        type: "string",
+      },
+    ],
     name: "updateBaseUri",
     outputs: [],
     stateMutability: "nonpayable",
@@ -517,9 +897,21 @@ module.exports = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
     name: "validators",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
